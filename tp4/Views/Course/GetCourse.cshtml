@@ -12,18 +12,11 @@
     else
 
     {
-        <h1>@ViewBag.Id</h1>
-        <div style="
-    width: 100%;
-    display: grid;
-    justify-content: start;
-    align-items:center;">
-
+        <h1 class="text-center">List of @ViewBag.Id Students:</h1>
+        <div class="text-center">
+            
             @foreach( var student in Model){
-            <div style="
-                            padding: 3vw;
-                            font-size:2ch;
-                        ">
+            <div style="padding: 2vw;font-size:2ch;">
                 @student.FirstName
             </div>
 

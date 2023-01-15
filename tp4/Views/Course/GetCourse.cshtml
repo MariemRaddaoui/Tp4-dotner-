@@ -1,0 +1,39 @@
+@{
+    @model IEnumerable<TP4.Models.Student>
+
+}
+
+
+@{
+    if (Model.Count() <= 0)
+    {
+        <h2 class="alert alert-warning">No one is having this course</h2>
+    }
+    else
+
+    {
+        <h1>@ViewBag.Id</h1>
+        <div style="
+    width: 100%;
+    display: grid;
+    justify-content: start;
+    align-items:center;">
+
+            @foreach( var student in Model){
+            <div style="
+                            padding: 3vw;
+                            font-size:2ch;
+                        ">
+                @student.FirstName
+            </div>
+
+            }
+
+        </div>
+    }
+
+
+}
+
+
+<a asp-controller="Course" asp-action="index">BACK</a>
